@@ -1,0 +1,136 @@
+body {
+  padding: 0; 
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+}
+#header{
+	background: #037A86;
+	color:#037A86;
+	padding:0.5vh;
+	margin: none;
+}
+#logo{
+	cursor:pointer;
+}
+#icon{
+	margin-left: 0.5vw;
+	font-size:3.3vw;
+	text-align: center;
+	color:white;
+	margin: 0vw;
+	padding: 0vw 1vw 0vw 1vw;	
+}
+.tabcontent {
+  display: none;
+  /*padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;*/
+}
+#icon:hover, #icon:focus, #icon:active{
+	text-shadow: 0 0.8vw 3vw rgb(0,0, 0);
+	cursor: pointer;
+	text-shadow: 0.8vw 0.3vw 0.5vw rgb(0, 0, 0);
+}
+img{
+	width: 9vw;
+	height: 1.7%;
+	margin: 0vw 0vw 0.6vw 0.6vw;
+	float: right;
+	vertical-align: top;
+	border: none;
+}
+#content{
+	margin: 1vw;
+	height:100vh;
+	background-color: #F6F7F8;
+	border: 1px solid #D6D9DC;
+	border-radius: 3px;
+}
+
+::-webkit-file-upload-button {
+  cursor: pointer;
+  background: #798686;
+  color: white;
+  padding: 5%;
+  outline: none;
+}
+::-webkit-file-upload-button:hover, #viewfile:hover, #Home>button:hover{
+	background: #a1aaaa;
+	outline: none;
+}
+#Home{
+	margin-top: 5%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+}
+#Home>button {
+  cursor: pointer;
+  background: #798686;
+  color: white;
+  flex: 0 0 15%;
+  width:12vw;
+  height:12vh;
+  font-size: 1.3vw;
+  margin: 3%;
+  outline: none;
+}
+#viewfile{
+  cursor: pointer;
+  background: #798686;
+  color: white;
+  padding: 1em;
+  outline: none;
+}
+#pmidList{
+	padding: 1%;
+	display: inline-block;
+	visibility: hidden;
+}
+.speaker-form {  
+  width: 80%;
+  padding: 50px;
+  margin: 0 0 40px 0;
+}
+.form-row {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.form-row input[type='text'] {
+  background-color: #FFFFFF;
+  border: 1px solid #D6D9DC;
+  border-radius: 3px;
+  width: 100%;
+  padding: 7px;
+  font-size: 14px;
+}
+
+.form-row label {
+  margin-bottom: 15px;
+}
+@media only screen and (min-width: 700px) {
+  .speaker-form-header,
+  .speaker-form {
+    width: 600px;
+  }
+  .form-row {
+    flex-direction: row;
+    align-items: flex-start; /* To avoid stretching */
+    margin-bottom: 20px;
+  }
+  .form-row input[type='text'] {
+    width: 250px;
+    height: initial;
+  }
+  .form-row label {
+    text-align: right;
+    width: 120px;
+    margin-top: 7px;
+    padding-right: 20px;
+  }
+}

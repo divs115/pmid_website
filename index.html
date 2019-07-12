@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ingest Publications</title>  
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+   <div id="header">
+	<i id="icon" class="fa fa-home" onclick="openCity(event, 'Home')"></i>
+	<img src="http://webcore.unm.edu/v2/images/unm-logo-tab-hsc.gif" onclick="openCity(event, 'Home')"/>
+   </div>
+	<div id="content">
+	   <form method="post" action="connect.php" style="display:none">
+		   Username: <input type="text" name="username"><br><br>
+		   Password: <input type="password" name="password"><br><br>
+		   <input type="submit" value="Submit">
+	   </form>
+	   <div id="Home" class="tabcontent">
+		  <button  onclick="openCity(event, 'PMIDS')">Import Publications</button> 
+		  <button  onclick="openCity(event, 'Profile')">Add Profile</button>
+		  <button  onclick="openCity(event, 'ncbi')">NCBI</button>
+		</div>
+		<div id="PMIDS" class="tabcontent">
+		   <h3> The file should be in .xls or .xlsx format. It must have a column with header "PMID".</h3><br>
+		   <input type="file" id="excelfile" onchange="ExportToTable()"/> <br><br>
+		   <!-- <input type="button" id="viewfile" value="Filter PMIDS" onclick="ExportToTable()" /> <br><br> -->
+		   <div id="pmidList"></div> <br><br>
+		   <table id="exceltable">  
+		   </table>
+	   </div>
+	   <div id="Profile" class="tabcontent">
+			<form method="post" class="speaker-form">
+			   <div class='form-row'>
+				  <label for='fname'>First Name</label>
+				  <input name='fname' type='text'/>
+				</div>
+				<div class='form-row'>
+				  <label for='mname'>Middle Name</label>
+				  <input name='mname' type='text'/>
+				</div>
+				<div class='form-row'>
+				  <label for='lname'>Last Name</label>
+				  <input name='lname' type='text'/>
+				</div>
+			</form>
+	   </div>
+	   <div id="ncbi" class="tabcontent">
+			<div>NCBI</div>
+	   </div>
+   </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/xlsx.core.min.js"></script>
+  <script src="js/xls.core.min.js"></script>
+  <script  src="js/index.js"></script>
+</body>
+
+</html>
