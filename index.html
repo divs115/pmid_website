@@ -20,20 +20,38 @@
 		   Password: <input type="password" name="password"><br><br>
 		   <input type="submit" value="Submit">
 	   </form>
-	   <div id="Home" class="wrapper tabcontent" style="display:block">
-		  <div class="one">
-			 <div class=short-panel onclick="openCity(event, 'PMIDS')">  </div>
-			 <div class=long-panel id="pubmedBtn"> Import Pubmed Ids</div>			 		 
-		  </div>
-		  <div class="two">
-			  <div class=long-panel id="profileBtn"> Create New Profile </div>
-			  <div class=short-panel>  </div>
-		  </div>
-		  <div class="three">
-			<div class=short-panel>  </div>
-			 <div class=long-panel id="ncbiBtn"> Import from NCBI </div>
+
+		<div class="container">
+		  <div class="content">
+			  <div class="content-overlay"></div>
+			  <img class="content-image" src="assets/pubmed2.jpg">
+			  <div class="content-details fadeIn-top">
+				<h3>This is a title</h3>
+				<p>This is a short description</p>
+			  </div>
 		  </div>
 		</div>
+		<div class="container">
+		  <div class="content">
+			  <div class="content-overlay"></div>
+			  <img class="content-image" src="assets/profile2.jpg">
+			  <div class="content-details fadeIn-top">
+				<h3>This is a title</h3>
+				<p>This is a short description</p>
+			  </div>
+		  </div>
+		</div>
+		<div class="container">
+		  <div class="content">
+			  <div class="content-overlay"></div>
+			  <img class="content-image" src="assets/ncbi2.jpg">
+			  <div class="content-details fadeIn-top">
+				<h3>This is a title</h3>
+				<p>This is a short description</p>
+			  </div>
+		  </div>
+		</div>
+		
 		<div id="PMIDS" class="tabcontent">
 		   <h3> The file should be in .xls or .xlsx format. It must have a column with header "PMID".</h3><br>
 		   <input type="file" id="excelfile" onchange="ExportToTable()"/> <br><br>
