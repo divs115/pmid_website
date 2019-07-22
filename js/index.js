@@ -1,3 +1,39 @@
+window.onload = function()
+{
+   window.onscroll = function() {stickyNav()};
+}
+
+var navbar = document.getElementById("navbar");
+var sticky = navbar.offsetTop;
+
+function stickyNav() { console.log("in stickyNav()");
+  if (window.pageYOffset >= sticky) {
+    navbar.classList.add("sticky")
+  } else {
+    navbar.classList.remove("sticky");
+  }
+}
+$("#myNav").click(function(e) {
+    closeNav();
+});
+$("#emailSubmit").click(function(e){
+	$("#Email").css("display", "none");
+	openNav();
+});
+$(function(){
+	openCity('event', "PMIDS");
+	//openEmail();
+});
+function openEmail(){
+	$("#Email").css("display", "block");
+}
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+  $("#Email").css("display", "none");
+}
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 function openCity(evt, cityName) {
 	console.log("HERE");
   var i, tabcontent, tablinks;
@@ -12,17 +48,8 @@ function openCity(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
-window.onscroll = function() {myFunction()};
-
-var navbar = document.getElementById("navbar");
-var sticky = navbar.offsetTop;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
+function returnId(){
+	return Math.random().toString(36).substr(2, 9);
 }
 function ExportToTable() {  
 	$("#pmidList").empty();
@@ -96,6 +123,7 @@ function BindTable(jsondata, tableid) {/*Function used to convert the JSON array
      }  
 	 console.log(pmidList.substring(0, pmidList.length-1));
 	 $("#pmidList").css("visibility", "visible");
+	 $("#exceltable").css("visibility", "visible");
 	 $("#pmidList").append("<strong>PMIDs List: </strong><br><br>"+pmidList.substring(0, pmidList.length-1));
  }  
  function BindTableHeader(jsondata, tableid) {/*Function used to get all column names from JSON and bind the html table header*/  
